@@ -1,10 +1,11 @@
 def are_all_conditions_true(list):
-    if list == [] :
+    if list==[]:
         result=None
     else:
         result=True
         for i in list:
-            if i!=True:
+            if i==False:
                 result=False
-    return print(result)
+                break
+    return result
 are_all_conditions_true([])

@@ -6,6 +6,6 @@ def is_a_conditions_true(list):
         for i in list:
             if i==True:
                 result=True
-    return print(result)
+    return result
 is_a_conditions_true([True,True])
  

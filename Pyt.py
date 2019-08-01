@@ -120,3 +120,24 @@ def factorial(n):
         for i in range(1,n+1):
             tmp*=i
     return tmp
+
+#wp12
+
+def char_to_int(ch):
+    if len(ch)!=1:
+        return False
+    else:
+        if ord(ch)<48 and ord(ch)>57:
+            return False
+    return ord(ch)-48
+
+#wp13
+def string_to_int(str):
+    result=0
+    for i in range(len(str)):
+        result+=char_to_int(str[i])*10**(len(str)-i-1)
+    return result
+
+#wp14
+
+

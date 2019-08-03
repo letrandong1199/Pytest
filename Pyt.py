@@ -132,6 +132,7 @@ def char_to_int(ch):
     return ord(ch)-48
 
 #wp13
+
 def string_to_int(str):
     result=0
     for i in range(len(str)):
@@ -139,5 +140,36 @@ def string_to_int(str):
     return result
 
 #wp14
+
+import re
+def is_palindrome(str):
+    str=re.sub('[^A-Za-z0-9]+', '', str)
+    str=str.lower()
+    for i in range(len(str)//2):
+        if str[i]!=str[len(str)-i-1]:
+            return False
+    return True
+
+#wp15
+def roman_numeral_to_int(str):
+    roman={"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000}
+    i=len(str)-1
+    total=roman[str[i]]
+    while i>0:
+        cur=roman[str[i]]
+        pre=roman[str[i-1]]
+        if pre<cur:
+            total-=pre
+            i-=1
+        else:
+            total+=pre
+            i-=1
+    return total
+
+#wp16
+
+
+
+
 
 
